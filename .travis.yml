@@ -20,13 +20,13 @@ matrix:
       os: windows
       language: shell
       before_install:
-        - choco install python --version 3.7.5
+        - choco install python --version 3.7.8
         - python -m pip install --upgrade pip
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
     # macOS
     - name: "macOS"
       os: osx
-      osx_image: xcode11
+      osx_image: xcode8
       language: shell
     # Linux
     - name: "Linux"
@@ -50,12 +50,4 @@ before_script:
 
 # Run tests
 script:
-  # Text processing
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_sentence_tokenization.py
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_word_tokenization.py
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_word_detokenization.py
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_pos_tagging.py
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_lemmatization.py
-  - travis_wait pytest wl_tests/wl_text/wl_text_processing/test_stop_words.py
-  # Others
-  - travis_wait pytest --ignore=wl_tests/wl_text/wl_text_processing/
+  - travis_wait pytest
