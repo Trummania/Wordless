@@ -12,7 +12,6 @@
 #
 
 # General
-pyinstaller
 pyqt5
 pytest
 
@@ -21,6 +20,7 @@ botok
 jieba
 nagisa
 nltk
+opencc
 ## pymorphy2 and its dictionaries
 https://github.com/kmike/pymorphy2/archive/master.zip
 pymorphy2-dicts-ru
